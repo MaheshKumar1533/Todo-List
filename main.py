@@ -35,15 +35,21 @@ def completetask():
     tasks, completed = gettasks()
     printtasks()
     choice = int(input("Enter the task number : "))
-    task = tasks.pop(choice-1)
-    completed.append(task)
-    puttasks(tasks, completed)
+    if 0<=choice<len(choice):
+        task = tasks.pop(choice-1)
+        completed.append(task)
+        puttasks(tasks, completed)
+    else:
+        print("Invalid Choice")
 
 def deletetask():
     printtasks()
     choice = int(input("Enter the task number : "))
-    tasks.pop(choice-1)
-    puttasks(tasks, completed)
+    if 0<=choice<len(choice):
+        tasks.pop(choice-1)
+        puttasks(tasks, completed)
+    else:
+        print("Invalid Choice")
 
 def showcompletedtasks():
     tasks, completed = gettasks()
